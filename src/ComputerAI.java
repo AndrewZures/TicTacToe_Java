@@ -1,8 +1,8 @@
 
 public class ComputerAI {
-	private int me = 1;
-	private int iCoordinate;
-	private int jCoordinate;
+	private int me = 1;  //used for minimax algorithm
+	private int iCoordinate; //final i coordinate for AI choice
+	private int jCoordinate; //final j coordinate for AI choice
 	
 	public int[] determineBestMove(int[][] board){
 		/*since only one computer AI is needed, a constructor is 

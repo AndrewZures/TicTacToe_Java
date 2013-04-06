@@ -1,3 +1,5 @@
+
+//imports are standard Window Builder Imports
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -26,8 +28,8 @@ public class TicTacToeGUI implements ActionListener {
 	private ArrayList<JButton> buttonList;  //create list of TTT GUI buttons
 	private final int USER = -1; //create constant USER with -1 value
 	
-	private int[] choice = new int[2];
-	private int winner;
+	private int[] choice = new int[2];  //helper array records i,j coord for given move
+	private int winner; //help int keeps track of winner
 	
 	//TTT buttons
 	private JButton gameButton1;
@@ -71,6 +73,7 @@ public class TicTacToeGUI implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		//listens for action performed on the GUI
+
 
 		//if event source is resetGameButton, reset game
 		if (e.getSource() == resetGameButton){
@@ -148,7 +151,7 @@ public class TicTacToeGUI implements ActionListener {
 		buttonList.get(buttonNum).setText("<html><font color='red'>X</html>");
 		
 		//check to see if there is a winner
-		winner = game.checkGameState(game.getBoard());
+		int winner = game.checkGameState(game.getBoard());
 	    if (winner != 2){
 	    		getGameWinner(winner);
 	    }

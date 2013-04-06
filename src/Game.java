@@ -1,7 +1,7 @@
 
 public class Game {
 	private int[][] board; // game board
-	private int[] choice = new int[2];
+	private int[] choice = new int[2];  //helper array keeps track of i,j coord for a given choice
 	
 	public Game(){
 		
@@ -23,11 +23,6 @@ public class Game {
 		return newBoard;	
 	}
 	
-	public void recordUserChoice(int i, int j, int player){
-		//record user's choice by putting their mark at i,j coord
-		board[i][j] = player; 
-	}
-	
 	public int[][] getBoard(){
 		return board;
 	}
@@ -41,6 +36,11 @@ public class Game {
 				board[i][j] = 0;
 			}
 		}
+	}
+	
+	public void recordUserChoice(int i, int j, int player){
+		//record user's choice by putting their mark at i,j coord
+		board[i][j] = player; 
 	}
 	
 	public int checkGameState(int[][] board){
