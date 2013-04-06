@@ -70,7 +70,7 @@ public class ComputerAI {
 			} //end of inner loops
 		} //end of outer for loop
 		
-		//return lowest avialable score
+		//return lowest available score
 		return min;
 	}
 	
@@ -97,7 +97,7 @@ public class ComputerAI {
 					//recursively get score of that choice
 					score = getMin(board, depth+1);
 	
-					/*of that score is greater than current max
+					/*if that score is greater than current max
 						set max to the score */
 					if (score > max){
 						max = score;

@@ -1,7 +1,6 @@
 
 public class Game {
-	private int[][] board;
-	private int GAMESIZE = 9; /*double check this*/
+	private int[][] board; // game board
 	private int[] choice = new int[2];
 	
 	public Game(){

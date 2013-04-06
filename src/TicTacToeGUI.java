@@ -18,15 +18,18 @@ import java.awt.Color;
 
 public class TicTacToeGUI implements ActionListener {
 
-	private JFrame frame;
-	private Game game = new Game();
-	private ComputerAI art = new ComputerAI();
-	private ArrayList<JButton> buttonList;
 	
-	private final int USER = -1;
+	private JFrame frame;  //create frame
+	private Game game = new Game();  //instantiate game
+	private ComputerAI art = new ComputerAI();  //instantiate computerAI
+	
+	private ArrayList<JButton> buttonList;  //create list of TTT GUI buttons
+	private final int USER = -1; //create constant USER with -1 value
+	
 	private int[] choice = new int[2];
 	private int winner;
 	
+	//TTT buttons
 	private JButton gameButton1;
 	private JButton gameButton2;
 	private JButton gameButton3;
@@ -38,6 +41,7 @@ public class TicTacToeGUI implements ActionListener {
 	private JButton gameButton9;
 	private JButton resetGameButton;
 	
+	//other game buttons
 	private JLabel resultLabel;
 	private JLabel titleLabel;
 	
